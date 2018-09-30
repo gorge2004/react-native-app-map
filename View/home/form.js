@@ -7,30 +7,41 @@ class form extends Component {
         super(props);
 
     }
+
     render(){
+        const forgetPsw = this.props.register ? ( 
+                                                    <Col>
+                                                        <Button full info>
+                                                            <Text>Forget your Password??</Text>
+                                                        </Button>
+                                                    </Col>
+                                                ):<Col />;
         return (
             <Form >
                 <Item floatingLabel>
                     <Label style={Styles.textWhite}>Username/Email</Label>
-                    <Input />
+                    <Input onChangeText={ this.props.onChangeUser } />
                 </Item>
                 <Item floatingLabel >
                     <Label style={Styles.textWhite}>Password</Label>
-                    <Input secureTextEntry={true} />
+                    <Input secureTextEntry={true} onChangeText={ this.props.onChangePsw } />
                 </Item>
-                <Row>
+                <Row style={Styles.topSpace}>
                     <Col>
-                        <Button full success>
+                        <Button full success onPress={ this.props.post }>
                             <Text>Login</Text>
                         </Button>
                     </Col>
                     <Col>
-                        <Button full danger onPress={() => this.props.onBack(this.props.idBack)}>
+                        <Button full danger onPress={() => this.props.onBack()}>
                             <Text>Back</Text>
                         </Button>
                     </Col>
                 </Row>
-                   
+                <Row style={Styles.topSpace}>
+                    {forgetPsw}
+                </Row>
+                
             </Form>
         );
     }
