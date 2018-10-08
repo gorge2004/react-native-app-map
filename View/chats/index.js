@@ -6,7 +6,21 @@ class ChatList extends Component{
     constructor(props){
         super(props);
     }
+    getChat = ()=>{
+        const json = [{Username:' Username 1',
+                       lastMessage:'hdasdasdjasdsad a das',
+                       timeMessage: '3:45 pm',
+                       image: require('../../assets/Images/user-profile.png'),
+                    },{Username:' Username 2',
+                    lastMessage:'hdasdasdsa',
+                    timeMessage: '3:30 pm',
+                    image: require('../../assets/Images/user-profile.png'),
+                 }];
+        const chats = json.map((json,id)=> <ChatItem key={id} Username={json.Username} time={json.timeMessage} message={json.lastMessage} img={json.image} onPress ={ () => this.props.navigation.navigate('Chat',{user: 'user'})} />);
+        return chats;
+    }
     render(){
+        const chats = this.getChat();
         return(
             <Container>
                 <Header  transparent>
@@ -20,7 +34,7 @@ class ChatList extends Component{
                         <Button transparent>
                             <Icon name='add' style={{color: 'black'}}/>
                         </Button>
-                        <Button transparent>
+                        <Button transparent onPress={() => this.props.navigation.navigate('Profile')}>
                             <Icon type='Feather' name='settings' style={{color: 'black'}} />
                         </Button>
                     </Right>
@@ -28,10 +42,10 @@ class ChatList extends Component{
 
                 <Content >
                     <Grid>
+                        
                         <Row>
                             <Col>
-                                <ChatItem onPress ={ () => this.props.navigation.navigate('Chat',{user: 'user'})} />
-                                <ChatItem />
+                                {chats}
                             </Col>
                         </Row>
                     </Grid>

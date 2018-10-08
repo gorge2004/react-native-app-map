@@ -1,6 +1,5 @@
 import React from 'react';
 import Routes from './routes'
-import Maps from './View/map/'
 import { Root } from 'native-base';
 
 

@@ -1,12 +1,14 @@
+
+import GestureRecognizer from 'react-native-swipe-gestures';
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import {Camera, Permissions,Location } from 'expo';
+//---------------ASSET
 import React, {Component} from 'react';
 import { Container, Footer, Content, Icon, Body, Header, Grid, Row, Right, Left, Text, Thumbnail } from 'native-base';
 import { TouchableOpacity, TouchableWithoutFeedback, AsyncStorage, View} from 'react-native';
-import GestureRecognizer from 'react-native-swipe-gestures';
 import Styles from '../../assets/styles/style';
-import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 
-import {Camera, Permissions } from 'expo';
 class CameraApp extends Component{
     constructor(props){
         super(props);
@@ -16,7 +18,7 @@ class CameraApp extends Component{
             user:{}
 
         };
-        this.camera;
+        this.camera,this.location;
         _isMounted = false;
         this.circularProgress;
 
@@ -31,6 +33,8 @@ class CameraApp extends Component{
         this._isMounted = true; 
         this.permissions();
         let user  = await AsyncStorage.getItem('user');
+        this.location = await Location.getCurrentPositionAsync({});
+
         user = eval("("+user+")") ;
         this.setState({user: user});
 
@@ -56,8 +60,7 @@ class CameraApp extends Component{
             this.setState({
                 type:  (this.state.type == Camera.Constants.Type.back) ? Camera.Constants.Type.front : Camera.Constants.Type.back,
             });
-            //logout, pratice
-            await AsyncStorage.clear();
+        
          }
         
     }
@@ -110,7 +113,11 @@ class CameraApp extends Component{
       }
 //-----------------------------------------------------------------------------------     
       redirect = (photo) =>{
-        this.props.navigation.navigate('previewImage',{image: photo,type:this.actionClick});
+        this.props.navigation.navigate('previewImage',{ image: photo,
+                                                        type:this.actionClick,
+                                                        lat:this.location.coords.latitude,
+                                                        long:this.location.coords.longitude
+                                                      });
       }
     render(){
         const {hasCameraPermission} = this.state;
@@ -120,7 +127,7 @@ class CameraApp extends Component{
         let display; 
                 if(hasCameraPermission == 'granted'){
                     display =
-                (<GestureRecognizer style={{flex:1}} onSwipeUp={ (state)=> this._onSwipeUp(state) } onSwipeDown={ (state) => this._onSwipeDown(state)}>
+                (<GestureRecognizer style={{flex:1}} onSwipeUp={ (state)=> this._onSwipeUp(state) } onSwipeDown={ (state) => this._onSwipeDown(state)} onSwipeLeft={(state =>{this.props.navigation.navigate('Map')})}>
                     <Camera ref={ref => {this.camera = ref}} style={{flex: 1}} type={this.state.type}>
                         <Content style={Styles.transparent}>
                             <Grid style={Styles.transparent}>

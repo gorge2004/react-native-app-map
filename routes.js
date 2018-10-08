@@ -3,10 +3,12 @@ import Home from './View/home';
 import CameraApp from './View/main-camera';
 import Loading from './View/loading';
 import previewImage from './View/main-camera/preview';
+import Map from './View/map/map';
 
 import ChatList from './View/chats/index';
 import Chat from './View/chats/chat';
 
+import  Profile from './View/profile/profile';
 
 //navigate
 import {createStackNavigator , createSwitchNavigator} from 'react-navigation';
@@ -16,7 +18,9 @@ const login = createStackNavigator({Home: Home});
 const authApp = createStackNavigator({MainCamera: CameraApp,
                                       previewImage:previewImage,
                                       MainChat:ChatList,
-                                      Chat: Chat},
+                                      Chat: Chat,
+                                      Profile: Profile,
+                                      Map:Map},
                                       {headerMode: 'none',});
 //switch 
 const flowAuth = createSwitchNavigator(

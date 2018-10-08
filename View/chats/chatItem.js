@@ -15,14 +15,14 @@ class ChatItem extends Component {
                 <List >
                     <ListItem  thumbnail button={true} onPress={ this.props.onPress }>
                         <Left>
-                            <Thumbnail source={require('../../assets/Images/user-profile.png')}/>
+                            <Thumbnail source={this.props.img}/>
                         </Left>
                         <Body>
-                            <Text> USername</Text>
-                            <Text note>sadadaadas</Text>
+                            <Text>{this.props.Username}</Text>
+                            <Text note>{this.props.message}</Text>
                         </Body>
                         <Right>
-                            <Text note>4:45 pm</Text>
+                            <Text note> {this.props.time}</Text>
                         </Right>
                     </ListItem>
                 </List>

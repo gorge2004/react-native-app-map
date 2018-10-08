@@ -12,8 +12,17 @@ class Loading extends Component{
     }
     validateUser = async() => {
         let user  = await AsyncStorage.getItem('user');
-        user = eval("("+user+")") ;
-        this.props.navigation.navigate(user.token ? 'AuthApp' : 'Login');
+        console.log("user",user);
+        if(user){
+            user = eval("("+user+")") ;
+            const token = user.token;
+            this.props.navigation.navigate( token ? 'AuthApp' : 'Login');
+        }else{
+            this.props.navigation.navigate('Login');
+
+        }
+     
+
     } 
     render(){
         return (<View style={Styles.center}>       
