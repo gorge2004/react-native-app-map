@@ -4,12 +4,19 @@ import  Styles from '../../assets/styles/style';
 import {Image, TouchableOpacity }from 'react-native';
 import Video from './video';
 import {ImageManipulator } from 'expo';
+ 
+import Send from './send';
 
 
 class Preview extends Component {
     constructor(props){
         super(props);
-        this.state = {header:null,imageShow:{},imageOriginal:{}};
+        this.state = {header:null,
+                      imageShow:{},
+                      imageOriginal:{},
+                      send:null, 
+                      };
+        this.friend = null, this.title = null;
         this.counter = 0 ;
 
     }
@@ -52,12 +59,37 @@ class Preview extends Component {
                                                                 {flip:{vertical:true}}
                                                             ],
                                                             { format: 'jpg' });
-        console.log("aqi4");
 
                     this.setState({imageShow:{uri:img.uri}});
                   
             }
           
+        }
+        send = (type) =>{
+            let send ;
+            this.title = null, this.friend = null;
+            switch(type){
+                case 'gift':
+                    send = <Send type={type} onClose={this._close} onTitle={(txt)=>  this.title = txt } onFriend={(txt)=> this.friend = txt } post={this.post} />;
+                    break;
+                case 'public':
+                    send = <Send type={type} onClose={this._close} onTitle={(txt)=>  this.title = txt }  post={this.post} />;
+
+                break;
+                case 'direct':
+                send = <Send type={type} onClose={this._close} onTitle={(txt)=>  this.title = txt } onFriend={(txt)=> this.friend = txt } post={this.post} />;
+                break;
+            }
+            this.setState({send: send});
+        } 
+        post =()=>{
+            console.log(this.title," friend ", this.friend);
+            
+            alert("sendd");
+        }
+        _close = ()=>{
+            this.setState({send: null});
+
         }
      render(){
         const { navigation } = this.props;
@@ -85,21 +117,22 @@ class Preview extends Component {
                             </Row>
                         </Grid>
                     </Content>
+                    {this.state.send}
                     <Footer transparent>
                         <FooterTab>
-                            <Button vertical success>
+                            <Button vertical success onPress={()=>{  this.send('gift');}}>
                                 <Icon name='gift' type='MaterialCommunityIcons'  />
                                 <Text>
                                     gift
                                 </Text>
                             </Button>
-                            <Button vertical warning>
+                            <Button vertical warning onPress={()=>{ this.send('public')}}>
                                 <Icon  name='add-location' type='MaterialIcons' />
                                 <Text>
                                     Public
                                 </Text>
                             </Button>
-                            <Button vertical danger>
+                            <Button vertical danger onPress={()=>{ this.send('direct')}}>
                                 <Icon name='inbox'  type='MaterialIcons' />
                                 <Text>
                                     Direct

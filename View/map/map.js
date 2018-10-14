@@ -15,16 +15,19 @@ class Map extends React.Component {
                       loading: null,
                       permission:{},
                       history:null,
-                      markSrc:[],
-                      mounted:false
+                     
                               };
-        this.timeOut;    
+        this.mounted = false;
+       
+        this.timeOut, this.markSrc = [] ;    
         
       }
       async componentDidMount (){
         const permission = await Permissions.askAsync(Permissions.LOCATION);
         this._endHistory();
-        this.setState({loading:true,permission:permission,mounted:true}); 
+        this.mounted = true;
+
+        this.setState({loading:true,permission:permission}); 
         this.requestMarkSource();      
         this._getRegion();
        
@@ -59,7 +62,7 @@ class Map extends React.Component {
                             lat:9.736774241735446,
                             long:-63.159260619431734
             });
-        this.setState({markSrc:marks});
+            this.markSrc = marks ;
     }
     // set current coords 
     changeLocation = (lat,long) =>{
@@ -113,7 +116,7 @@ class Map extends React.Component {
     }
     //load marks to map
     marks = () =>{
-        const {markSrc} = this.state;
+        const markSrc = this.markSrc;
         const marks =  markSrc.map(
             (mark,index )=>{
                 
@@ -128,7 +131,7 @@ class Map extends React.Component {
         return  marks;
     }
     componentWillUnmount(){
-        this.setState({mounted:false});
+        this.mounted = false;
         clearTimeout(this.timeOut);
         this._endHistory();
        
@@ -137,8 +140,9 @@ class Map extends React.Component {
     render(){
         let content ;
      
-        if(this.state.mounted){
+        if(this.mounted){
             if(this.state.permission.status === 'granted' ){
+                
                 content = this.state.loading ? this.loading() : this.map();
    
            } else {
