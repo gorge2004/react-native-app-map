@@ -44,6 +44,7 @@ class CameraApp extends Component{
         if(this._isMounted ){      
             try {
                 await Permissions.askAsync(Permissions.CAMERA);
+                const permission = await Permissions.askAsync(Permissions.LOCATION);
                 await Permissions.askAsync(Permissions.AUDIO_RECORDING);
                 const check = await Permissions.getAsync(Permissions.CAMERA);
                 this.setState({hasCameraPermission: check.status});

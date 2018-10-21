@@ -40,7 +40,7 @@ export default class History extends Component {
         const fullWidth = this.width.interpolate({ inputRange: [0,1], outputRange: [0,width] });
         const fullHeight = this.height.interpolate( {inputRange: [0,1], outputRange: [0,height]} );  
          return(
-                <Container style={{backgroundColor:'#000',position:'absolute',zIndex:1}}>   
+                <Container style={{backgroundColor:'#000',position:'absolute',zIndex:3}}>   
                     <Animated.View  style={{height:fullHeight,width:fullWidth, alignContent:"center",justifyContent:'center'}} >
                         <Header transparent >
                             <Left>
