@@ -31,7 +31,7 @@ class CameraApp extends Component{
 
    async componentDidMount (){
         this._isMounted = true; 
-        this.permissions();
+      await  this.permissions();
         let user  = await AsyncStorage.getItem('user');
         this.location = await Location.getCurrentPositionAsync({});
 

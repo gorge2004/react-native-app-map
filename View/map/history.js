@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { View, Animated, Image, Dimensions, Easing, Text} from 'react-native';
 import { Header, Left, Body, Right, Container, Content, Footer } from 'native-base';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import VideoHistory from './VideoHistory';
+
 
 export default class History extends Component {
      constructor(props){
@@ -31,7 +33,7 @@ export default class History extends Component {
             createAnimation(this.width, 1000, Easing.linear),
             createAnimation(this.height, 1000, Easing.linear,),
 
-        ]).start(()=>{this.circularProgress.animate(100, this.props.duration);});
+        ]).start(()=>{   this.circularProgress.animate(100, this.props.duration); this.props.loaded();});
 
      }
 
@@ -58,7 +60,7 @@ export default class History extends Component {
                             <Body />                    
                             <Right />
                         </Header>
-                        <Image source={{uri: this.props.media}}  style={{width:width,flex:1}} resizeMode='stretch' />
+                        {(this.props.type == 'image' ? <Image source={{uri: this.props.media}}  style={{width:width,flex:1}} resizeMode='stretch' />: <VideoHistory uri={this.props.media} />) }
                     </Animated.View>
                  
                    
