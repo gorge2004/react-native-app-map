@@ -1,38 +1,24 @@
-This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+﻿#Mapscat
 
-Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
+## Que es Mapscat 
 
-## Table of Contents
+Basado en esto, creemos en el interminable valor de compartir lo que nos gusta con quienes lo aprecian. Ocurre desde tiempos inmemorables, y seguirá ocurriendo aún cuando ya no estemos aquí.
 
-* [Updating to New Releases](#updating-to-new-releases)
-* [Available Scripts](#available-scripts)
-  * [npm start](#npm-start)
-  * [npm test](#npm-test)
-  * [npm run ios](#npm-run-ios)
-  * [npm run android](#npm-run-android)
-  * [npm run eject](#npm-run-eject)
-* [Writing and Running Tests](#writing-and-running-tests)
-* [Environment Variables](#environment-variables)
-  * [Configuring Packager IP Address](#configuring-packager-ip-address)
-* [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)
-* [Sharing and Deployment](#sharing-and-deployment)
-  * [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)
-  * [Building an Expo "standalone" app](#building-an-expo-standalone-app)
-  * [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)
-    * [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)
-    * [Should I Use ExpoKit?](#should-i-use-expokit)
-* [Troubleshooting](#troubleshooting)
-  * [Networking](#networking)
-  * [iOS Simulator won't open](#ios-simulator-wont-open)
-  * [QR Code does not scan](#qr-code-does-not-scan)
+Mapscat ​es una red social basada en geolocalización + cámara,​ la cual te permite
+compartir momentos de tu vida con tus amigos. La diferencia entre nosotros y el resto
+de las redes sociales, es que nuestros momentos están en una ubicación geográfica
+determinada al momento de tomar la foto o grabar el video.
 
-## Updating to New Releases
+Dichos momentos pueden ser compartidos en público a través de una historia que
+recorre un mapa del tamaño de tus amistades y sus ubicaciones (podría ser un grupo de
+amigos en una pequeña ciudad o el viaje de las Kardashians a Cabo, depende de lo
+que elijas seguir).
 
-You should only need to update the global installation of `create-react-native-app` very rarely, ideally never.
-
-Updating the `react-native-scripts` dependency of your app should be as simple as bumping the version number in `package.json` and reinstalling your project's dependencies.
-
-Upgrading to a new version of React Native requires updating the `react-native`, `react`, and `expo` package versions, and setting the correct `sdkVersion` in `app.json`. See the [versioning guide](https://github.com/react-community/create-react-native-app/blob/master/VERSIONS.md) for up-to-date information about package version compatibility.
+También puedes compartir los momentos de manera privada a través de regalos​, los
+cuales son fotos/videos ocultos en un determinado lugar, el cual puede ser visible o no
+para su destinatario. En otras palabras, podrías dejar una fotografía del atardecer en la
+vereda del lago a una persona que la recibirá inesperadamente al estar cerca del lugar,
+o bien, indicarle a la persona que le has dejado un regalo en determinado lugar.
 
 ## Available Scripts
 

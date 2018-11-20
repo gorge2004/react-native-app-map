@@ -9,6 +9,8 @@ import ChatList from './View/chats/index';
 import Chat from './View/chats/chat';
 
 import  Profile from './View/profile/profile';
+import  FriendsList from './View/profile/friendsList';
+
 
 //navigate
 import {createStackNavigator , createSwitchNavigator} from 'react-navigation';
@@ -20,7 +22,8 @@ const authApp = createStackNavigator({MainCamera: CameraApp,
                                       MainChat:ChatList,
                                       Chat: Chat,
                                       Profile: Profile,
-                                      Map:Map},
+                                      Map: Map,
+                                      FriendsList: FriendsList},
                                       {headerMode: 'none',});
 //switch 
 const flowAuth = createSwitchNavigator(

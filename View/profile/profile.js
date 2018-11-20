@@ -7,7 +7,7 @@ import { ImagePicker } from 'expo';
 class Profile extends Component {
     constructor(props){
         super(props);
-        this.state = {user:{},imgProfile:{},Version:null,active:false,url:{ios: 'https://www.google.com/',android: 'https://www.google.com/'}};
+        this.state = {user:{},imgProfile:{},version:null,active:false,url:{ios: 'https://www.google.com/',android: 'https://www.google.com/'}};
     }
    async componentDidMount(){
             let user  = await AsyncStorage.getItem('user');
@@ -49,7 +49,6 @@ class Profile extends Component {
                             message: 'Hey there, You run to download MAPSCAT, it is great!! '+this.state.url.android,
                             title: 'MAPSCAT AWESOME'
                           }});
-        console.log(os);
         
         Share.share(os, {
             // Android only:
@@ -114,7 +113,7 @@ class Profile extends Component {
                                 }}
                             >
                                 <View style={{margin:10, width:200}}>
-                                    <Button iconLeft  full>
+                                    <Button iconLeft  full onPress={() => this.props.navigation.navigate('FriendsList') }>
                                         <Icon type='Ionicons' name='md-contacts' />
                                         <Text>Friends List</Text>
                                     </Button>  
@@ -167,7 +166,7 @@ class Profile extends Component {
                      </Fab>
                 </View>
                 <Footer style={{backgroundColor: 'transparent'}} >
-                    <Text note> Version {this.state.Version}</Text>
+                    <Text note> Version {this.state.version}</Text>
                 </Footer>
             </Container>
         );

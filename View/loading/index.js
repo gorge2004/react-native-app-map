@@ -12,7 +12,6 @@ class Loading extends Component{
     }
     validateUser = async() => {
         let user  = await AsyncStorage.getItem('user');
-        console.log("user",user);
         if(user){
             user = eval("("+user+")") ;
             const token = user.token;
