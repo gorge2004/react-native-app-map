@@ -20,10 +20,80 @@ para su destinatario. En otras palabras, podrías dejar una fotografía del atar
 vereda del lago a una persona que la recibirá inesperadamente al estar cerca del lugar,
 o bien, indicarle a la persona que le has dejado un regalo en determinado lugar.
 
-## Available Scripts
+## Filosofía 
 
-If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
+La forma de comunicarnos ha cambiado drásticamente. Cada vez las personas
+conversan menos y chatean más, cada vez hay menos contacto físico y más vida digital.
+Pensamos que esto es evolutivo y natural, pero sentimos que se está perdiendo un
+poco de nuestra humanidad, así como las ganas de explorar el mundo que nos rodea.
+Por eso, ideamos una red en la cual puedas tener la experiencia digital a través del
+contacto con el mundo real:
+* - Que puedas cautivar a alguien con el amanecer que viste mientras cruzabas el
+puente.
+* - Que puedas recomendar un plato a tu amigo cuando visite algún restaurant.
+* - Que puedas declararle tu amor a una persona en ese lugar que suele frecuentar.
+* - O simplemente, salir a dar un paseo y ver qué te depara el día…
 
+Nos mueve la idea de experimentar algo auténtico, de explorar y descubrir el mundo a
+nuestro alrededor, tal como lo hacen nuestros pequeños amigos (los gatos​, y Salserín
+en su gira del 92-94). Queremos que seas un entusiasta de las aventuras, queremos
+que cuentes tu historia, queremos que seas un Mapscat.
+
+
+##¿Cómo funciona?
+
+
+
+Queremos que la interfaz del usuario sea visualmente agradable, alegre, vibrante,
+simple pero fácil de recordar. La cosa iría más o menos así:
+
+* - Al abrir la app por primera vez, encontramos una pantalla con color sólido, el
+logotipo y las opciones de sign up / log in (mientras en el fondo, con cierta
+transparencia, ocurre algún tipo de animación como del mapa mundial en un
+esquema cool. También podría ser un video.)
+* - Pantalla de inicio con cámara abierta y despliegue de botones (sería bueno que
+en primera instancia incluya un breve tutorial de uso y funciones)
+* - Al capturar el momento, la parte donde salía el botón de disparo cambia por
+las múltiples opciones: público, oculto o directo). En caso de:
+** a. Ser público: será dirigido al time line (al cual se accede al ir a la parte
+izquierda de la pantalla)
+**  b. Ser oculto: se podrá seleccionar cual(es) destinatario(s) será(n) capaz(ces)
+de descubrir el regalo, pudiendo elegir si se desea notificar o no al mismo.
+** c. Ser directo: se podrá seleccionar a cual(es) destinatario(s) perteneciente(s) a
+la lista de amigos se le enviará.
+* - Time line: para acceder a este menú, solo se tiene que deslizar la pantalla hacia
+la izquierda, permitiendo acceder a un mapa simple donde se desarrollan las
+historias de nuestros amigos. La pantalla se despliega naturalmente en el
+entorno geógrafico de la persona que accede, y luego puede ampliarse a
+distintos tamaños.
+**   a. Aquí podremos elegir si ver el time line de manera cronológica (automatico),
+explorar el mapa a nuestro gusto (manual) o filtrar según nuestras preferencias
+(listas, cuentas favoritas, marcas, popular).
+** b. Dentro del time line podremos activar el catlem shake al agitar el teléfono, esto
+nos permitirá explorar de manera aleatoria.
+** c. Dentro del time line también podremos activar el mapscat trends al pulsar el #,
+esto nos permitirá ver que es popular dentro del mapa que no estamos viendo.
+* - Modo explorador: para acceder a este menú, solo se tiene que deslizar la
+pantalla hacia la derecha, permitiendo acceder a un mapa en el cual podremos:
+** a. Descubrir e ir tras regalos que nos han dejado.
+**  b. Ver y gestionar que regalos hemos dejado
+**  c. Explorar promociones cercanas (esto es ideal para las marcas)
+**  d. Ver los momentos directos que nos han enviado y todo tipo de funciones
+secretas / ocultas.
+
+*Futuramente, para este modo podría habilitarse la realidad aumentada al acercarse a
+un regalo en específico.
+
+*  - Modo mi consola: para acceder a este menú, basta con deslizar la pantalla
+hacia arriba, permitiendo acceder a un panel en el cual podremos:
+**  a. Gestionar nuestro perfil, datos, contraseña, entre otros
+**  b. Conectar listas de amigos
+**  c. Información de la app
+**  d. Compartir la app
+**  e. Cerrar sesión
+
+
+ 
 ### `npm start`
 
 Runs your app in development mode.
