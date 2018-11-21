@@ -66,19 +66,19 @@ la izquierda, permitiendo acceder a un mapa simple donde se desarrollan las
 historias de nuestros amigos. La pantalla se despliega naturalmente en el
 entorno geógrafico de la persona que accede, y luego puede ampliarse a
 distintos tamaños.
-**   a. Aquí podremos elegir si ver el time line de manera cronológica (automatico),
+* *   a. Aquí podremos elegir si ver el time line de manera cronológica (automatico),
 explorar el mapa a nuestro gusto (manual) o filtrar según nuestras preferencias
 (listas, cuentas favoritas, marcas, popular).
-** b. Dentro del time line podremos activar el catlem shake al agitar el teléfono, esto
+* * b. Dentro del time line podremos activar el catlem shake al agitar el teléfono, esto
 nos permitirá explorar de manera aleatoria.
-** c. Dentro del time line también podremos activar el mapscat trends al pulsar el #,
+* * c. Dentro del time line también podremos activar el mapscat trends al pulsar el #,
 esto nos permitirá ver que es popular dentro del mapa que no estamos viendo.
 * - Modo explorador: para acceder a este menú, solo se tiene que deslizar la
 pantalla hacia la derecha, permitiendo acceder a un mapa en el cual podremos:
-** a. Descubrir e ir tras regalos que nos han dejado.
-**  b. Ver y gestionar que regalos hemos dejado
-**  c. Explorar promociones cercanas (esto es ideal para las marcas)
-**  d. Ver los momentos directos que nos han enviado y todo tipo de funciones
+* * a. Descubrir e ir tras regalos que nos han dejado.
+* *  b. Ver y gestionar que regalos hemos dejado
+* *  c. Explorar promociones cercanas (esto es ideal para las marcas)
+* *  d. Ver los momentos directos que nos han enviado y todo tipo de funciones
 secretas / ocultas.
 
 *Futuramente, para este modo podría habilitarse la realidad aumentada al acercarse a
@@ -86,11 +86,11 @@ un regalo en específico.
 
 *  - Modo mi consola: para acceder a este menú, basta con deslizar la pantalla
 hacia arriba, permitiendo acceder a un panel en el cual podremos:
-**  a. Gestionar nuestro perfil, datos, contraseña, entre otros
-**  b. Conectar listas de amigos
-**  c. Información de la app
-**  d. Compartir la app
-**  e. Cerrar sesión
+* *  a. Gestionar nuestro perfil, datos, contraseña, entre otros
+* *  b. Conectar listas de amigos
+* *  c. Información de la app
+* *  d. Compartir la app
+* *  e. Cerrar sesión
 
 
  
