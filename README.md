@@ -90,7 +90,7 @@ hacia arriba, permitiendo acceder a un panel en el cual podremos:
 * *  d. Compartir la app
 * *  e. Cerrar sesión
 
-
+##RUN
  
 ### `npm start`
 
