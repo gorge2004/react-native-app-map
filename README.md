@@ -2,8 +2,6 @@
 
 ## Que es Mapscat 
 
-Basado en esto, creemos en el interminable valor de compartir lo que nos gusta con quienes lo aprecian. Ocurre desde tiempos inmemorables, y seguirá ocurriendo aún cuando ya no estemos aquí.
-
 Mapscat ​es una red social basada en geolocalización + cámara,​ la cual te permite
 compartir momentos de tu vida con tus amigos. La diferencia entre nosotros y el resto
 de las redes sociales, es que nuestros momentos están en una ubicación geográfica
